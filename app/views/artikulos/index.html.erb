@@ -1,0 +1,21 @@
+<h1>Artikulos Listing Page</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artikulos.each do |a| %>
+      <tr>
+        <td><%= a.title %></td>
+        <td><%= a.description %></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,7 +1,10 @@
 class ArtikulosController < ApplicationController
   def show
     @artikulo = Artikulo.find(params[:id])
-    #byebug
   end
-  
+
+  def index 
+    @artikulos = Artikulo.all
+  end
+
 end
