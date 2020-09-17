@@ -3,3 +3,9 @@
 <p><strong>Title: </strong><%= @artikulo.title %></p>
 <p><strong>Description: </strong><%= @artikulo.description %></p> 
 
+<br>
+<%= link_to 'Edit', edit_artikulo_path(@artikulo) %>
+<br><br>
+<%= link_to 'Delete', artikulo_path(@artikulo), method: :delete, data: { confirm: 'Sure ka besh?' } %>
+<br><br>
+<%= link_to 'Balik sa Home', artikulos_path() %>

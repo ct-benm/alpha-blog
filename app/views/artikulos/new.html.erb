@@ -1,30 +1,6 @@
 <h1>Gumawa ng bagong Artikulo</h1>
 
-<% if @artikulo.errors.any? %>
-  <h2>May mali sa mga artikulo mo, ayaw ma save</h2>
-  <ul>
-    <% @artikulo.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
+<%= render 'form' %>
 
-
-<% end %>
-
-
-<%= form_with scope: :artikulo, url: artikulos_path, local: true do |f| %>
-  <p>
-    <%= f.label :title %> <br>
-    <%= f.text_field :title %>
-  </p>
-
-  <p>
-    <%= f.label :description  %> <br>
-    <%= f.text_area :description %>
-  </p>  
-
-  <p>
-    <%= f.submit %>
-  </p>
-
-<% end %>
+<br><br>
+<%= link_to 'Balik sa Home', artikulos_path() %>
